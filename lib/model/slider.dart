@@ -20,7 +20,7 @@ class Slider {
 
 final sliderArrayList = [
     Slider(
-        sliderImageUrl: 'assets/images/slider_1.png',
+        sliderImageUrl: 'assets/images/exchange.jpg',
         sliderHeading: Constants.SLIDER_HEADING_1,
         sliderSubHeading: Constants.SLIDER_DESC),
     Slider(
@@ -28,7 +28,7 @@ final sliderArrayList = [
         sliderHeading: Constants.SLIDER_HEADING_2,
         sliderSubHeading: Constants.SLIDER_DESC),
     Slider(
-        sliderImageUrl: 'assets/images/slider_3.png',
+        sliderImageUrl: 'assets/images/transfer.jpg',
         sliderHeading: Constants.SLIDER_HEADING_3,
         sliderSubHeading: Constants.SLIDER_DESC),
   ];
