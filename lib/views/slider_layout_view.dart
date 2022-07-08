@@ -1,5 +1,6 @@
 import 'package:e_wallet/constants/constants.dart';
 import 'package:e_wallet/model/slider.dart';
+import 'package:e_wallet/views/log_in.dart';
 import 'package:e_wallet/views/sign_up.dart';
 import 'package:e_wallet/widgets/slide_dots.dart';
 import 'package:e_wallet/widgets/slide_items/slide_item.dart';
@@ -57,7 +58,7 @@ class _SliderLayoutViewState extends State<SliderLayoutView> {
                         child: TextButton(
                           onPressed: (){
                             print('Go to Next Page');
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
                           },
                           child: Text(
                             Constants.NEXT,

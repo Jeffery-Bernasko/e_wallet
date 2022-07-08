@@ -41,61 +41,64 @@ class _LoginState extends State<Login> {
                 ],
               ),
 
-              Column(
-                children: [
-
-                  TextFormField(
-                    controller: _email,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: "Email",
-                      contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-                      enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(25.0)),
-                      borderSide: BorderSide(
-                        color: Colors.grey
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 20,),
-
-                  TextFormField(
-                    controller: _password,
-                    keyboardType: TextInputType.text,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-                      enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(25.0)),
-                      borderSide: BorderSide(
-                        color: Colors.grey
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 20,),
-
-                  Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
                   children: [
-                  Text("I have forgotten password"),
-                //Later will change to Text Button
-                  Text("Login",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),)
-              ],
+
+                    TextFormField(
+                      controller: _email,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                        contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                        enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                        borderSide: BorderSide(
+                          color: Colors.grey
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20,),
+
+                    TextFormField(
+                      controller: _password,
+                      keyboardType: TextInputType.text,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                        enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                        borderSide: BorderSide(
+                          color: Colors.grey
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20,),
+
+                    Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Text("I have forgotten password"),
+                  //Later will change to Text Button
+                    Text("Login",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),)
+                ],
              ),
 
-                  ElevatedButton(
-                    child: Text(
-                      "Login"
-                    ),
-                    onPressed: (){},
-                  )
+                    ElevatedButton(
+                      child: Text(
+                        "Login"
+                      ),
+                      onPressed: (){},
+                    )
 
-                ],
+                  ],
+                ),
               )
             ],
           ),
