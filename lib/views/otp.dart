@@ -35,9 +35,9 @@ class _OtpScreenState extends State<OtpScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    Color themeColor = Theme.of(context).primaryColor;
+    //Color themeColor = Theme.of(context).primaryColor;
     return Scaffold(
-      backgroundColor: themeColor,
+      //backgroundColor: themeColor,
       body: ListView(
         children: [
           Stack(
@@ -46,7 +46,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
-                  color: themeColor
+        //          color: themeColor
                 ),
               ),
 
@@ -55,11 +55,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                 //  color: themeColor,
-                  gradient: LinearGradient(
-                    end: Alignment.topRight,
-                    begin: Alignment.bottomLeft,
-                    colors: [themeColor, themeColor.withOpacity(0.66), themeColor.withOpacity(0)]
-                  ),
+                
                 ),
               ),
               Container(
@@ -76,7 +72,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         Padding(
                           padding: EdgeInsets.only(top: 100),
                           child: Text("Let's Know It's You",
-                          style: TextStyle(color: Colors.white, fontSize: 25),
+                          style: TextStyle(color: Colors.black, fontSize: 25),
                           ),
                           ),
 
@@ -84,7 +80,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             padding: EdgeInsets.only(top: 20),
                             child: Text("Enter the OTP sent to your number.",
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.7), 
+                              color: Colors.black, 
                               fontSize: 16,
                               fontWeight: FontWeight.w300
                               ),
@@ -111,16 +107,16 @@ class _OtpScreenState extends State<OtpScreen> {
                                       textInputAction: TextInputAction.done,
                                       decoration: InputDecoration(
                                         hintText: "Verication Code",
-                                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
+                                        hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w300),
                                         filled: true,
                                         fillColor: Colors.white.withOpacity(0.2),
                                         enabledBorder: OutlineInputBorder(
                                           borderRadius: BorderRadius.circular(20),
-                                          borderSide: BorderSide(width: 2, color: Colors.transparent),
+                                          borderSide: BorderSide(width: 2, color: Colors.grey),
                                         ),
                                         disabledBorder: OutlineInputBorder(
                                           borderRadius: BorderRadius.circular(20),
-                                          borderSide: BorderSide(width: 2, color: Colors.transparent),
+                                          borderSide: BorderSide(width: 2, color: Colors.grey),
                                         ),
                                         focusColor: Colors.white,
                                         focusedBorder: OutlineInputBorder(
@@ -128,7 +124,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                           borderSide:  BorderSide(width: 2, color: Colors.transparent),
                                        ),
                                        contentPadding: EdgeInsets.only(left: 20, right: 15),
-                                       prefixIcon: Icon(Icons.message_outlined, color: Colors.blue,),
+                                       prefixIcon: Icon(Icons.message_outlined, color: Colors.black,),
                                       ),
                                       validator: (value){
                                         if(value == null || value.isEmpty || int.parse(value) <= 59999999 || int.parse(value) >= 70000000){
@@ -144,6 +140,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             ),
                           ),
 
+                          SizedBox(height: 35,),
                           Hero(
                             tag: "btn", //  Use same tag 
                             child: Card(
@@ -172,9 +169,12 @@ class _OtpScreenState extends State<OtpScreen> {
                                   )
                                 ),
                               ),
-                              elevation: 7,
+                              elevation: 3,
                               color: Colors.white,
-                            )
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(55.0)
+                              ),
+                            ),
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
